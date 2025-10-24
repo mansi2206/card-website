@@ -1,0 +1,300 @@
+/* ======== RESET ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ======== BASE STYLES ======== */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ======== CARD CONTAINER ======== */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ======== CARD ======== */
+.card {
+  width: 360px;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* ======== IMAGE ======== */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* ======== TEXT BOX ======== */
+.textBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.textBox h2 {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: #2c2c2c;
+}
+
+.textBox p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ======== AMOUNT BOX ======== */
+#amountBox {
+  width: 80%;
+  background-color: #e0ecff;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#leftBox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.imageBox img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.textAmount p:first-child {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.textAmount p:last-child {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+#rightBox a {
+  color: #3b4ce2;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+#rightBox a:hover {
+  color: #2d358c;
+}
+
+/* ======== PAYMENT BUTTON ======== */
+#paymentButton {
+  width: 80%;
+  height: 45px;
+  background-color: #2d358c;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 10px 20px rgba(45, 53, 140, 0.3);
+}
+
+#paymentButton:hover {
+  background-color: #3b4ce2;
+  transform: translateY(-3px);
+}
+
+/* ======== CANCEL BOX ======== */
+.cancelBox a {
+  color: #777;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.cancelBox a:hover {
+  color: #333;
+}
+
+/* ======== ANIMATION ======== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======== RESPONSIVE DESIGN ======== */
+@media (max-width: 480px) {
+  .card {
+    width: 90%;
+    gap: 20px;
+  }
+
+  .textBox p {
+    font-size: 0.95rem;
+  }
+
+  #amountBox {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #paymentButton {
+    width: 90%;
+  }
+}
+
+
+/*
+HERE IS MY CODE WRITTEN
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins' , sans-serif;
+    color: #333;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-color: rgb(241, 199, 206);
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width:  360px;
+    height: 750px;
+    background-color: azure;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.8s ease-in-out;
+}
+.card img{
+    margin-top: 0;
+    padding: 0;
+    height:30%;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px; ;
+    border: 2px solid #e0e0e0;
+}
+.card h2{
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: 10px;
+}
+
+.card p{
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+    text-align: center;
+    padding: 0 20px;
+
+}
+
+.textBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 70%;
+    text-align: center;
+}
+
+#amountBox{
+    width: 80%;
+    height: 9%;
+    background-color: rgb(105, 173, 237);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#paymentButton{
+    width: 80%;
+    height: 8%;
+    background-color: #2d358cff;
+    color: white;
+    border-radius: 10px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+#leftBox{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 15px;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
+
+}
+
+#rightBox{
+
+}
+
+a{
+    color: rgb(68, 65, 65);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: larger;
+}
+*/
